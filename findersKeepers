@@ -1,0 +1,11 @@
+function findElement(arr, func) {
+  let num = 0;
+while (func(arr[num])!==true) {
+  num++;
+}
+return arr[num]; 
+
+  }
+
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
