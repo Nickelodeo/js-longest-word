@@ -1,0 +1,28 @@
+function bouncer(arr) {
+  // Don't show a false ID to this bouncer.
+    
+  var filtered = arr.filter(faulty);
+  // filtered.filter(spaecialFaulty); -- I tried to avoid using isNaN but failed
+  return filtered;
+}
+
+function faulty(item)
+{ 
+      
+  switch (item)
+    {
+      case false:
+      case NaN:
+      case null:
+      case 0:
+      case "":
+      case undefined:
+     
+       return false;
+      default:
+        if (isNaN(item)){
+            return item;
+            }
+        return true;
+    }
+}
